@@ -8,7 +8,7 @@ LOCAL = '127.0.0.1'
 #creates a TCP socket, we might end up using TCP, but we will see about the future
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #Using the socket object we created, connect to the server IP at the given port number
-s.connect((LOCAL, 9999))
+s.connect((RPIADDR,9999))
 
 
 while True:

@@ -4,7 +4,7 @@ import socket
 #Creates a TCP Socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #We bind the socket to port 9999
-s.bind((socket.gethostname(), 9999))
+s.bind(('', 9999))
 #We allow 5 connections to be in the queue, we are waiting for 1 or more (up to 5) connections
 s.listen(5)
 
