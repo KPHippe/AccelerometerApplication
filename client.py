@@ -16,10 +16,10 @@ while True:
 
     #if we actually received something from the server, print it out and continue
     if(len(recMessage) > 0):
-        recMessage = tuple(json.loads(recMessage))
-        x = int(recMessage[0][1].strip())
-        y = int(recMessage[1][1].strip())
-        z = int(recMessage[2][1].strip())
+        recMessage = recMessage.split()
+        x = int(recMessage[0])
+        y = int(recMessage[1])
+        z = int(recMessage[2])
         print(f"x: {x}\ty: {y}\tz: {z}")
         # print(f"received '{recMessage}' from server")
     #Else, something went wrong
