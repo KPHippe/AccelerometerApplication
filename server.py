@@ -27,10 +27,12 @@ while True:
                     universal_newlines=True)
 
 
-        msg = (("x",x.stdout.split()[0]), ("y", y.stdout.split()[0]), ("z", z.stdout.split()[0]))
-
+        #msg = (("x",x.stdout.split()[0]), ("y", y.stdout.split()[0]), ("z", z.stdout.split()[0]))
+        
         #msg = json.JSONEncoder().encode(msg)
-        msg = json.dumps(msg)
+        #msg = json.dumps(msg)
+        #msg = f"{x.stdout.split()[0]}\n{y.stdout.split()[0]\n{z.stdout.split()[0]}}"
+        msg = "{}\n{}\n{}".format(x.stdout.split()[0], y.stdout.split()[0], z.stdout.split()[0])
         clientsocket.send(bytes(msg, "utf-8"))
         sleep(0.1)
 
