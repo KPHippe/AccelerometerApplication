@@ -17,5 +17,5 @@ while(1):
                     universal_newlines=True)
 
     print(f"z: {z.stdout} ")
-
+    print(f"{x.stdout.split()[0]}")
     sleep(1)
