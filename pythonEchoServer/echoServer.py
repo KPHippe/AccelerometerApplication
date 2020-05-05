@@ -1,6 +1,5 @@
 import socket
 
-
 #Creates a TCP Socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #We bind the socket to port 9999
@@ -14,6 +13,7 @@ while True:
     print(f"Connection from {address} has been established.")
     
     while True:
+
         message = ''
         #We wait for a message to come from the client and decode it
         message = clientsocket.recv(256).decode("utf-8")
