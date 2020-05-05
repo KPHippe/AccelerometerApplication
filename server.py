@@ -30,7 +30,6 @@ while True:
 
         msg = json.JSONEncoder().encode(msg)
 
-
         clientsocket.send(bytes(msg, "utf-8"))
 
 
